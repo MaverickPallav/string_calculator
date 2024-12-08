@@ -16,4 +16,9 @@ class StringCalculator:
 
         numbers_arr = re.split(delimiter, numbers)
 
+        negative_numbers_arr = [int(number) for number in numbers_arr if int(number) < 0]
+
+        if negative_numbers_arr:
+            raise ValueError(f"Negatives not allowed: {negative_numbers_arr}")
+
         return sum([int(number) for number in numbers_arr])
