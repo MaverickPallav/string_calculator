@@ -19,6 +19,12 @@ class StringCalculatorTest(unittest.TestCase):
 
     def test_new_lines_between_numbers(self):
         self.assertEqual(self.calculator.add("1\n2,3"), 6)
+    
+    def test_different_delimiters_1(self):
+        self.assertEqual(self.calculator.add("//;\n1;2"), 3)
+    
+    def test_different_delimiters_2(self):
+        self.assertEqual(self.calculator.add("//|\n4|5|6"), 15)
 
 if __name__ == '__main__':
     unittest.main()
