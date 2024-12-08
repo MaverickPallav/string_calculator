@@ -21,4 +21,4 @@ class StringCalculator:
         if negative_numbers_arr:
             raise ValueError(f"Negatives not allowed: {negative_numbers_arr}")
 
-        return sum([int(number) for number in numbers_arr])
+        return sum([int(number) for number in numbers_arr if 0 <= int(number) <= 1000])

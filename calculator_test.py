@@ -31,6 +31,9 @@ class StringCalculatorTest(unittest.TestCase):
             self.calculator.add("1,-6,3,-5")
 
         self.assertEqual(str(context.exception), "Negatives not allowed: [-6, -5]")
+    
+    def test_ignore_large_numbers(self):
+        self.assertEqual(self.calculator.add("2,1001,3"), 5)
 
 if __name__ == '__main__':
     unittest.main()
