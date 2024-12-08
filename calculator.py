@@ -3,6 +3,7 @@ class StringCalculator:
         if not numbers:
             return 0
 
-        numbers = numbers.split(",")
+        numbers = numbers.replace('\n', ',')
+        numbers_arr = numbers.split(",")
 
-        return sum([int(number) for number in numbers])
+        return sum([int(number) for number in numbers_arr])
