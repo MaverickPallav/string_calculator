@@ -34,6 +34,9 @@ class StringCalculatorTest(unittest.TestCase):
     
     def test_ignore_large_numbers(self):
         self.assertEqual(self.calculator.add("2,1001,3"), 5)
+    
+    def test_multiple_delimiters(self):
+        self.assertEqual(self.calculator.add("//[*][%]\n1*2%3"), 6)
 
 if __name__ == '__main__':
     unittest.main()
