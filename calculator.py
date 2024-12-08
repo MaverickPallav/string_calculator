@@ -3,4 +3,6 @@ class StringCalculator:
         if not numbers:
             return 0
 
-        return int(numbers)
+        numbers = numbers.split(",")
+
+        return sum([int(number) for number in numbers])
